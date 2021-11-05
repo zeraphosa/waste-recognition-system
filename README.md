@@ -55,3 +55,5 @@ Pil
 Cam şişe
 Maske
 --------------------------------
+
+Live - https://atik-tespit-sistemi.netlify.app
