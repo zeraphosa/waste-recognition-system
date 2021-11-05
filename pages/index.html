@@ -2,16 +2,16 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atik Tespit Sistemi</title>
-    <link rel="stylesheet" href="/plugins/fontawesome/css/all.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atik Tespit Sistemi</title>
+  <link rel="stylesheet" href="/plugins/fontawesome/css/all.css">
 
-    <link rel="stylesheet" href="/plugins/owl/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="/plugins/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/slider-style.css">
+  <link rel="stylesheet" href="/plugins/owl/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="/plugins/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/slider-style.css">
 </head>
 
 <body>
@@ -44,26 +44,44 @@
     </div>
   </div>
 
-    <div class="menu">
-        <ul class="wide-screen">
-            <li><a><i class="fas fa-search-location"></i>&nbsp; En yakın kutu</a></li>
-            <li><a><i class="fas fa-hand-point-up"></i>&nbsp; Atık seç</a></li>
-            <li><a><i class="fas fa-camera"></i>&nbsp; Fotoğraf al</a></li>
-            <li><a><i class="fas fa-chart-pie"></i>&nbsp; Analiz</a></li>
-            <li><a><i class="fas fa-user"></i>&nbsp; Kullanıcı bilgileri</a></li>
-        </ul>
-        <ul class="mobile-screen">
-            <li><a><i class="fas fa-search-location"></i></a></li>
-            <li><a><i class="fas fa-hand-point-up"></i></a></li>
-            <li><a><i class="fas fa-camera"></i></a></li>
-            <li><a><i class="fas fa-chart-pie"></i></a></li>
-            <li><a><i class="fas fa-user"></i></a></li>
-        </ul>
+  <div class="menu">
+    <ul class="wide-screen">
+      <li><a><i class="fas fa-search-location"></i>&nbsp; En yakın kutu</a></li>
+      <li><a><i class="fas fa-hand-point-up"></i>&nbsp; Atık seç</a></li>
+      <li><a id="start-camera"><i class="fas fa-camera"></i>&nbsp; Fotoğraf al</a></li>
+      <li><a><i class="fas fa-chart-pie"></i>&nbsp; Analiz</a></li>
+      <li><a><i class="fas fa-user"></i>&nbsp; Kullanıcı bilgileri</a></li>
+    </ul>
+    <ul class="mobile-screen">
+      <li><a><i class="fas fa-search-location"></i></a></li>
+      <li><a><i class="fas fa-hand-point-up"></i></a></li>
+      <li><a><i class="fas fa-camera"></i></a></li>
+      <li><a><i class="fas fa-chart-pie"></i></a></li>
+      <li><a><i class="fas fa-user"></i></a></li>
+    </ul>
+  </div>
+
+
+
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+
+      <video id="video" width="320" height="240" autoplay></video>
+      <button id="click-photo">Click Photo</button>
+      <canvas id="canvas" width="320" height="240"></canvas>
+
     </div>
 
-    <script src="/plugins/jquery/jquery-3.6.0.min.js"></script>
-    <script src="/plugins/owl/js/owl.carousel.min.js"></script>
-    <script src="/scripts/script.js"></script>
+  </div>
+
+  <script src="/plugins/jquery/jquery-3.6.0.min.js"></script>
+  <script src="/plugins/owl/js/owl.carousel.min.js"></script>
+  <script src="/scripts/script.js"></script>
 </body>
 
 </html>
