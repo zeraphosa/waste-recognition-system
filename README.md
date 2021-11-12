@@ -23,7 +23,7 @@ BSO (bau & service oberursel) Almanyanin atık yönetimi, şehir temizliği gibi
 
 ---
 
-Tam detayli kodlar ile atiklar - [https://tr.wikipedia.org/wiki/Geri_dönüşüm](https://tr.wikipedia.org/wiki/Geri_d%C3%B6n%C3%BC%C5%9F%C3%BCm) 
+Tam detayli kodlar ile atiklar - [https://tr.wikipedia.org/wiki/Geri_dönüşüm](https://tr.wikipedia.org/wiki/Geri_d%C3%B6n%C3%BC%C5%9F%C3%BCm)
 
 Atiklar toplandiktan sonraki surecle ilgili kisa bilgi - [https://ekolojist.net/geri-donusum-nedir-nasil-yapilir/](https://ekolojist.net/geri-donusum-nedir-nasil-yapilir/)
 
@@ -31,14 +31,14 @@ Atiklar toplandiktan sonraki surecle ilgili kisa bilgi - [https://ekolojist.net/
 
 Atik Yonetim uygulamasi - sirket gibi yerlerin atik icin basvurmasi gereken site bilgisi -[http://www.cevresehirkutuphanesi.com/assets/files/slider_pdf/7NiB09QPiroJ.pdf](http://www.cevresehirkutuphanesi.com/assets/files/slider_pdf/7NiB09QPiroJ.pdf)
 
-Donustur Kazan ve AtikNakit uygulamalarina giris icin telefon numarasi gerektigi icin deneyemedim. 
+Donustur Kazan ve AtikNakit uygulamalarina giris icin telefon numarasi gerektigi icin deneyemedim.
 
 Atik Topla uygulamasi - Evde biriktirdiginiz atiklarin alinmasi icin nakliye cagirdiginiz bir sistem.
 
 Atik Yonetim rehberi atik detaylarini ve kodlarini tam detayli sekilde gosteren bir uygulama - verileri burdan cekmemiz cok iyi olabilir.
 
-Veriler 
---------------------------------
+## Veriler
+
 Karton bardak
 Tahta çubuk
 Kağıt
@@ -54,6 +54,29 @@ Pil
 İzmarit
 Cam şişe
 Maske
---------------------------------
+
+---
 
 Live - https://atik-tespit-sistemi.netlify.app
+
+MIT License
+
+Copyright (c) 2021 Zaur Sharifov
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.F
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

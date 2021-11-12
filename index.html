@@ -7,14 +7,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Atik Tespit Sistemi</title>
   <link rel="stylesheet" href="/plugins/fontawesome/css/all.css">
-
   <link rel="stylesheet" href="/plugins/owl/css/owl.carousel.min.css">
   <link rel="stylesheet" href="/plugins/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/base.css">
   <link rel="stylesheet" href="/css/slider-style.css">
 </head>
 
 <body>
+  <div class="menu">
+    <ul class="wide-screen">
+      <li><a href="/index.html"><i class="logo fas fa-recycle"></i></a></li>
+      <li><a href="/pages/map.html"><i class="fas fa-search-location"></i>&nbsp; En yakın kutu</a></li>
+      <li><a id="pick-btn"><i class="fas fa-hand-point-up"></i>&nbsp; Atık seç</a></li>
+      <li><a id="camera-btn"><i class="fas fa-camera"></i>&nbsp; Fotoğraf al</a></li>
+      <li><a href="/pages/charts.html"><i class="fas fa-book"></i>&nbsp; Döküman</a></li>
+      <li><a href="/pages/profile.html"><i class="fas fa-user"></i>&nbsp; Kullanıcı bilgileri</a></li>
+    </ul>
+    <ul class="mobile-screen">
+      <li><a href="/index.html"><i class="logo fas fa-recycle"></i></a></li>
+      <li><a href="/pages/map.html"><i class="fas fa-search-location"></i></a></li>
+      <li><a><i class="fas fa-hand-point-up"></i></a></li>
+      <li><a><i class="fas fa-camera"></i></a></li>
+      <li><a href="/pages/charts.html"><i class="fas fa-book"></i></a></li>
+      <li><a href="/pages/profile.html"><i class="fas fa-user"></i></a></li>
+    </ul>
+  </div>
+
+  <div id="photoModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div>
+        <video id="video" width="320" height="240" autoplay></video>
+        <canvas id="canvas" width="320" height="240"></canvas>
+      </div>
+      <button id="click-photo"><i class="fas fa-camera"></i></button>
+    </div>
+  </div>
+
+  <div id="pickModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="waste">
+        <label for="waste">Atık seçiniz</label>
+        <select name="waste" id="waste">
+          <option value="">kağıt torba</option>
+          <option value="">ambalaj kağıdı</option>
+          <option value="">İçecek kartonu</option>
+          <option value="">katlanır karton</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
   <div class="banner-slider">
     <div class="owl-carousel">
       <div class="item">
@@ -22,8 +66,6 @@
           <div class="img for-text d-flex align-items-center justify-content-center"
             style="background-image: url(/img/slider-1.jpg);">
             <p class="header">Geri dönüşüme destek geleceğe destektir</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, illo. Nostrum ab repellendus fugit
-              accusamus quibusdam!</p>
           </div>
         </div>
       </div>
@@ -44,45 +86,12 @@
     </div>
   </div>
 
-  <div class="menu">
-    <ul class="wide-screen">
-      <li><a><i class="fas fa-search-location"></i>&nbsp; En yakın kutu</a></li>
-      <li><a><i class="fas fa-hand-point-up"></i>&nbsp; Atık seç</a></li>
-      <li><a id="start-camera" onclick="baslat()"><i class="fas fa-camera"></i>&nbsp; Fotoğraf al</a></li>
-      <li><a><i class="fas fa-chart-pie"></i>&nbsp; Analiz</a></li>
-      <li><a><i class="fas fa-user"></i>&nbsp; Kullanıcı bilgileri</a></li>
-    </ul>
-    <ul class="mobile-screen">
-      <li><a><i class="fas fa-search-location"></i></a></li>
-      <li><a><i class="fas fa-hand-point-up"></i></a></li>
-      <li><a><i class="fas fa-camera"></i></a></li>
-      <li><a><i class="fas fa-chart-pie"></i></a></li>
-      <li><a><i class="fas fa-user"></i></a></li>
-    </ul>
-  </div>
 
-
-
-
-  <!-- The Modal -->
-  <div id="myModal" class="modal">
-
-    <!-- Modal content -->
-    <div class="modal-content">
-      <span class="close">&times;</span>
-
-      <video id="video" width="320" height="240" autoplay></video>
-      <button id="click-photo" onclick="cek()">Click Photo</button>
-      <canvas id="canvas" width="320" height="240"></canvas>
-
-    </div>
-
-  </div>
 
   <script src="/plugins/jquery/jquery-3.6.0.min.js"></script>
   <script src="/plugins/owl/js/owl.carousel.min.js"></script>
   <script src="/scripts/slider.js"></script>
-  <script src="/python/script.js"></script>
+  <script src="/scripts/script.js"></script>
 </body>
 
 </html>

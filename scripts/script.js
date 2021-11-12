@@ -1,4 +1,4 @@
-let camera_button = document.querySelector("#start-camera");
+let camera_button = document.querySelector("#camera-btn");
 let video = document.querySelector("#video");
 let click_button = document.querySelector("#click-photo");
 let canvas = document.querySelector("#canvas");
@@ -12,40 +12,31 @@ click_button.addEventListener('click', function() {
    	// data url of the image
    	console.log(image_data_url);
 });
-// Get the modal
-var modal = document.getElementById("myModal");
-// Get the button that opens the modal
-var btn = document.getElementById("start-camera");
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
+var photo_modal = document.getElementById("photoModal");
+var photo_btn = document.getElementById("camera-btn");
+var photo_span = document.getElementsByClassName("close")[0];
+photo_btn.onclick = function() {
+  photo_modal.style.display = "block";
 }
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
+photo_span.onclick = function() {
+  photo_modal.style.display = "none";
 }
-// When the user clicks anywhere outside of the modal, close it
+
+var pick_modal = document.getElementById("pickModal");
+var pick_btn = document.getElementById('pick-btn');
+var pick_span = document.getElementsByClassName('close')[1];
+pick_btn.onclick = function () {
+	pick_modal.style.display = "block";
+}
+pick_span.onclick = function () {
+	pick_modal.style.display = "none";
+}
+
+
 window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+	if (event.target == photo_modal || event.target == pick_modal) {
+	  photo_modal.style.display = "none";
+	  pick_modal.style.display = "none";
+	}
   }
-}
-
-
-function postData(input) {
-    $.ajax({
-        type: "POST",
-        url: "/reverse_pca.py",
-        data: { param: input },
-        success: callbackFunc
-    });
-}
-
-function callbackFunc(response) {
-    // do something with the response
-    console.log(response);
-}
-
-postData('data to process');
+  

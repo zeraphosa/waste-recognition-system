@@ -1,0 +1,153 @@
+@font-face {
+    font-family: averta-regular;
+    src: url(/fonts/Averta-Cyrillic-Regular.otf);
+}
+@font-face {
+    font-family: averta-bold;
+    src: url(/fonts/Averta-Cyrillic-Bold.otf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #FFFFFF;
+    color: #000;
+    font-size: 18px;
+    font-family: averta-regular;
+}
+
+.menu {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #20232A;
+    color: #FFFFFF;
+    z-index: 2;
+}
+
+.menu ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+.menu li {
+    width: 20%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu .logo{
+    color: #61DAFB;
+    font-size: 60px;
+}
+
+.menu .mobile-screen {
+    display: none;
+}
+
+.menu a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.menu a:hover {
+    color: #61DAFB;
+    transition: all 3ms ease-in-out;
+}
+
+@media only screen and (max-width: 720px) {
+    .menu .wide-screen {
+        display: none;
+    }
+
+    .menu .mobile-screen {
+        display: flex;
+        font-size: 25px;
+    }
+    .menu .logo{
+        color: #61DAFB;
+        font-size: 30px;
+    }
+}
+
+/*  START MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    height: 50%;
+    position: relative;
+}
+.modal-content div{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.modal-content button{
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%,-50%);
+    font-size: 50px;
+}
+.modal-content .waste{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    font-size: 25px;
+}
+.waste label{
+    margin-bottom: 30px;
+}
+.waste select{
+    width: 50%;
+    height: auto;
+    font-size: 25px;
+}
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*  END MODAL */
