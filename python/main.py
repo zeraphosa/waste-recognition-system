@@ -1,18 +1,13 @@
-
 import cv2
-
 backsub = cv2.createBackgroundSubtractorMOG2()
 kamera = cv2.VideoCapture(0)
 kamera.set(cv2.CAP_PROP_BUFFERSIZE, 1024)
-
 genislik = 704
 yukseklik = 288
-
 konumSayac = 0
 girenSayisi = 0
 simdiki_veri = []
 gecmis_veri = []
-
 while True:
     ret, frame = kamera.read()
     if kamera:
