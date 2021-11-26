@@ -8,7 +8,8 @@ camera_button.addEventListener('click', async function() {
 });
 click_button.addEventListener('click', function() {
    	canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
-   	let image_data_url = canvas.toDataURL('image/jpeg');
+   	// let image_data_url = canvas.toDataURL('image/jpeg');
+	let image_data_url = canvas.toDataURL('/img/jpeg');
    	// data url of the image
    	console.log(image_data_url);
 });
