@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Atik Tespit Sistemi</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/fontawesome/css/all.css">
+    <link rel="stylesheet" href="~/lib/owl/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/lib/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    <link rel="stylesheet" href="~/css/base.css" />
+    <link rel="stylesheet" href="~/css/slider-style.css" />
+    <link rel="stylesheet" href="~/css/docs.css" />
+
+
+</head>
+<body>
+    @*<header>
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                <div class="container">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Atik Tespit Sistemi</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Anasayfa</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>*@
+
+    <div class="menu">
+        <ul class="wide-screen">
+            <li><a asp-area="" asp-controller="Home" asp-action="Index"><i class="logo fas fa-recycle"></i></a></li>
+            <li><a asp-area="" asp-action="Maps"><i class="fas fa-search-location"></i>&nbsp; En yakın kutu</a></li>
+            <li><a id="pick-btn"><i class="fas fa-hand-point-up"></i>&nbsp; Atık seç</a></li>
+            <li><a id="camera-btn"><i class="fas fa-camera"></i>&nbsp; Fotoğraf al</a></li>
+            <li><a asp-area="" asp-action="Docs"><i class="fas fa-book"></i>&nbsp; Döküman</a></li>
+            <li>
+                <partial name="_LoginPartial" />
+            </li>
+        </ul>
+        <ul class="mobile-screen">
+            <li><a asp-area="" asp-controller="Home" asp-action="Index"><i class="logo fas fa-recycle"></i></a></li>
+            <li><a asp-area="" asp-action="Maps"><i class="fas fa-search-location"></i></a></li>
+            <li><a id="pick-btn"><i class="fas fa-hand-point-up"></i></a></li>
+            <li><a id="camera-btn"><i class="fas fa-camera"></i></a></li>
+            <li><a asp-area="" asp-action="Docs"><i class="fas fa-book"></i></a></li>
+            <li>
+                <partial name="_LoginPartial" />
+            </li>
+        </ul>
+    </div>
+
+    <div id="photoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div>
+                <video id="video" width="320" height="240" autoplay></video>
+                <canvas id="canvas" width="320" height="240"></canvas>
+            </div>
+            <button id="click-photo"><i class="fas fa-camera"></i></button>
+        </div>
+    </div>
+
+    <div id="pickModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="waste">
+                <label for="waste">Atık seçiniz</label>
+                <select name="waste" id="waste">
+                    <option value="">kağıt torba</option>
+                    <option value="">ambalaj kağıdı</option>
+                    <option value="">İçecek kartonu</option>
+                    <option value="">katlanır karton</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div>
+        @RenderBody()
+    </div>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    <script src="~/lib/owl/js/owl.carousel.min.js"></script>
+    <script src="~/js/slider.js"></script>
+    <script src="~/js/script.js"></script>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
