@@ -4,7 +4,15 @@
     ViewData["Title"] = "Log out";
 }
 
-<header>
+<style>
+    .mrgn {
+        margin-top: 150px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+</style>
+
+<header class="mrgn">
     <h1>@ViewData["Title"]</h1>
     @{
         if (User.Identity.IsAuthenticated)

@@ -45,7 +45,7 @@ namespace atik_tespit_sistemi.MVC.Areas.Identity.Pages.Account.Manage
         {
             [Required]
             [EmailAddress]
-            [Display(Name = "New email")]
+            [Display(Name = "Yeni email")]
             public string NewEmail { get; set; }
         }
 
