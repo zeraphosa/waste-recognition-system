@@ -11,7 +11,8 @@ def home():
 @app.route('/api', methods=['GET'])
 def api_filter():
     query_parameters = request.args
-    id = query_parameters.get('id')
-    return id
+    kullanici_id = query_parameters.get('kullanici_id')
+    photo_byte = query_parameters.get('photo_byte')
+    return photo_byte
 
 app.run()
