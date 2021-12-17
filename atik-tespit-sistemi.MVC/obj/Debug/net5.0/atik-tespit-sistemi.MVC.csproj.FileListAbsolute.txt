@@ -199,3 +199,4 @@ D:\Code\atik-tespit-sistemi\atik-tespit-sistemi.MVC\obj\Debug\net5.0\Razor\Areas
 D:\Code\atik-tespit-sistemi\atik-tespit-sistemi.MVC\obj\Debug\net5.0\Razor\Views\Home\Maps.cshtml.g.cs
 D:\Code\atik-tespit-sistemi\atik-tespit-sistemi.MVC\obj\Debug\net5.0\Razor\Views\Home\Docs.cshtml.g.cs
 D:\Code\atik-tespit-sistemi\atik-tespit-sistemi.MVC\obj\Debug\net5.0\Razor\Views\Home\Profile.cshtml.g.cs
+D:\Code\atik-tespit-sistemi\atik-tespit-sistemi.MVC\obj\Debug\net5.0\Razor\Views\Home\Takephoto.cshtml.g.cs

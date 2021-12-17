@@ -1,0 +1,107 @@
+﻿@{
+    ViewData["Title"] = "Take Photo";
+}
+
+<style>
+    .cntnr {
+        margin: 140px 15%;
+    }
+</style>
+
+<div class="cntnr">
+    @*<table cellpadding="0" cellspacing="0">
+            <tr>
+                <th style="align-items: center;"><u>Live Camera</u></th>
+                <th style="align-items: center;"><u>Captured Picture</u></th>
+            </tr>
+            <tr>
+                <td>
+                    <div id="webcam"></div>
+                </td>
+                <td><img id="imgCapture" /></td>
+            </tr>
+            <tr>
+                <td style="align-items: center;">
+                    <input type="button" id="btnCapture" value="Capture" />
+                </td>
+                <td style="align-items: center;">
+                    <input type="button" id="btnUpload" value="Upload" disabled="disabled" />
+                </td>
+            </tr>
+        </table>*@
+
+    <div style="margin: 0 auto; width: 980px; text-align: center">
+        <div style="float: left; border: 4px solid #ccc; padding: 5px">
+            <div id="Camera">
+            </div>
+            <br>
+            <input type="button" value="Capture" />
+        </div>
+        <div style="float: left; margin-left: 20px; border: 4px solid #ccc; padding: 5px">
+            <img id="show" style="width: 320px; height: 240px;" src="../../WebImages/person.jpg" />
+            <br>
+            <br>
+            <input id="Submit1" type="submit" value="submit" />
+        </div>
+    </div>
+
+</div>
+
+@section scripts
+{
+    <script src="@Url.Content("~/Scripts/jquery.webcam.js")">
+
+    </script>
+    <script type="text/javascript">
+
+            $("#Camera").webcam({
+                width: 320,
+                height: 240,
+                mode: "save",
+                swffile: "@Url.Content("~/Scripts/jscam.swf")",
+                onTick: function () { },
+                onSave: function () {
+                    UploadPic();
+                },
+                onCapture: function () {
+                    webcam.save("@Url.Content("~/Photo/Capture")/");
+             },
+                debug: function () { },
+                onLoad: function () { }
+
+            });
+
+    </script>
+}
+
+
+
+@*<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="WebCam.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            Webcam.set({
+                width: 320,
+                height: 240,
+                image_format: 'jpeg',
+                jpeg_quality: 90
+            });
+            Webcam.attach('#webcam');
+            $("#btnCapture").click(function () {
+                Webcam.snap(function (data_uri) {
+                    $("#imgCapture")[0].src = data_uri;
+                    $("#btnUpload").removeAttr("disabled");
+                });
+            });
+            $("#btnUpload").click(function () {
+                $.ajax({
+                    type: "POST",
+                    url: "CS.aspx/SaveCapturedImage",
+                    data: "{data: '" + $("#imgCapture")[0].src + "'}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (r) { }
+                });
+            });
+        });
+    </script>*@
