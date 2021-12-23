@@ -12,10 +12,20 @@ camera_button.addEventListener('click', async function () {
 click_button.addEventListener('click', function () {
 	canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
 	let image_data_url = canvas.toDataURL('/img/jpeg');
+	// _base64ToArrayBuffer(image_data_url)
 	// data url of the image
 	location.href = 'http://127.0.0.1:5000/api?photo_byte='+image_data_url;
-})
 
+})
+function _base64ToArrayBuffer(base64) {
+	var binary_string = window.atob(base64);
+	var len = binary_string.length;
+	var bytes = new Uint8Array(len);
+	for (var i = 0; i < len; i++) {
+		bytes[i] = binary_string.charCodeAt(i);
+	}
+	return bytes.buffer;
+}
 
 var photo_modal = document.getElementById("photoModal");
 var photo_btn = document.getElementById("camera-btn");

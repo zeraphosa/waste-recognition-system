@@ -1,10 +1,10 @@
 import requests
 import json
 
-API_URL = ''
+API_URL = 'http://127.0.0.1:5000'
 TOKEN = '{INTENSEYE_TOKEN}'
 
-IMAGE_URL = ""
+IMAGE_URL = "http://127.0.0.1:5000/api?photo_byte"
 
 headers = {
   'Content-Type': 'application/json'
@@ -14,20 +14,6 @@ headers = {
 payload = {
   "image": {
       "url": IMAGE_URL
-  },
-  "tracks": [{
-          "type": "person",
-          "params": {
-              "pose": True,
-              "emotion": True,
-              "ageGender": True
-          }
-      }
-  ],
-  "options": {
-      "objectDetection": {
-          "confidence": 0.85
-      }
   }
 }
 
