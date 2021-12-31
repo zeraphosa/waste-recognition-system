@@ -19,30 +19,30 @@ def home():
 def api_filter():
     query_parameters = request.args
     # kullanici_id = query_parameters.get('kullanici_id')
+    global photo_byte
     photo_byte = query_parameters.get('photo_byte')
+    photo_byte = photo_byte.replace(" ","+")
+    # photo_byte = photo_byte.replace("data:image/png:base64", "") + photo_byte.replace(" ","+")
+    # photo_byte = photo_byte[22:]
 
-
-    photo_byte = photo_byte.replace("data:image/png:base64", "") + photo_byte.replace(" ","+")
-    
-    imgdata = base64.urlsafe_b64decode(photo_byte)
-    filename = 'someimage.png'
-    with open(filename, 'wb') as f:
-        f.write(imgdata)
-
-
-
+    decodeimg()
+    movefiles()
 
     return photo_byte
 
+def decodeimg():
+    imgdata = base64.standard_b64decode(photo_byte)
+    filename = 'testimg.jpg'
+    with open(filename, 'wb') as f:
+        f.write(imgdata)
+
+def movefiles():
+    src_path = r'D:\Code\atik-tespit-sistemi\testimg.jpg'
+    dst_path = r'D:\Code\atik-tespit-sistemi\python\test\testimg.jpg'
+
+    shutil.move(src_path, dst_path)
+
 app.run()
-
-
-
-
-
-
-
-
 
 
 

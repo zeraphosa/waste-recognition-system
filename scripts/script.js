@@ -12,6 +12,8 @@ camera_button.addEventListener('click', async function () {
 click_button.addEventListener('click', function () {
 	canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
 	let image_data_url = canvas.toDataURL('/img/jpeg');
+	let n = 22;
+	image_data_url = image_data_url.substring(n);
 	// let result = _base64ToArrayBuffer(image_data_url)
 	// data url of the image
 	location.href = 'http://127.0.0.1:5000/api?photo_byte='+image_data_url;
