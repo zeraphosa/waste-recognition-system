@@ -7,6 +7,7 @@ import base64
 from flask.app import Flask
 
 import shutil
+import json
 
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
@@ -29,18 +30,30 @@ def api_filter():
 
     decodeimg()
     movefiles()
-    jsresponse()
     return jsresponse()
 
-
+@app.route('/api/sonuc', methods=['GET','POST'])
 def jsresponse():
-    header1 = '''<h1>Plastik kutusu</h1>'''
-    header2 = '''<h2>Pet şişe</h2>'''
-    content1 = '''<p>EPA, 2017 yılında plastik şişe üretiminin 3,7 milyon tona ulaştığını ve bunun %30'dan azının geri dönüştürüldüğünü tahmin ediyor.</p>'''
-    header3 = "Azaltmak:"
-    content2 = "Tek kullanımlık şişeler veya teneke kutular satın almak yerine kendi şişenizi getirin."
-    warning = "Atacağınız nesne <span>plastik poşetsiz, temiz, boş ve kuru olmalıdır.</span>"
+    value = {
+        "header1" : "Plastik kutusu",
+        "header2" : "Pet sise",
+        "content1" : "EPA, 2017 yilinda plastik sise uretiminin 3,7 milyon tona ulastigini ve bunun %30'dan azinin geri donusturuldugunu tahmin ediyor.",
+        "header3" : "Azaltmak: ",
+        "content2" : "Tek kullanimlik siseler veya teneke kutular satin almak yerine kendi sisenizi getirin.",
+        "warning" : "Atacaginiz nesne <span>plastik posetsiz, temiz, bos ve kuru olmalidir."
+    }
+    response = flask.jsonify(value)
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
+    # return json.dumps(value)
 
+    # header1 = '''<h1>Plastik kutusu</h1>'''
+    # header2 = '''<h2>Pet şişe</h2>'''
+    # content1 = '''<p>EPA, 2017 yılında plastik şişe üretiminin 3,7 milyon tona ulaştığını ve bunun %30'dan azının geri dönüştürüldüğünü tahmin ediyor.</p>'''
+    # header3 = '''<h2>Azaltmak:</h2>'''
+    # content2 = '''<p>Tek kullanımlık şişeler veya teneke kutular satın almak yerine kendi şişenizi getirin.</p>'''
+    # warning = '''<p>Atacağınız nesne <span>plastik poşetsiz, temiz, boş ve kuru olmalıdır.</span></p>'''
+    # return header1, header2, content1, header3, content2, warning
 
 def decodeimg():
     imgdata = base64.standard_b64decode(photo_byte)
