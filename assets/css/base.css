@@ -1,10 +1,10 @@
 @font-face {
     font-family: averta-regular;
-    src: url(/fonts/Averta-Cyrillic-Regular.otf);
+    src: url(/assets/fonts/Averta-Cyrillic-Regular.otf);
 }
 @font-face {
     font-family: averta-bold;
-    src: url(/fonts/Averta-Cyrillic-Bold.otf);
+    src: url(/assets/fonts/Averta-Cyrillic-Bold.otf);
 }
 * {
     margin: 0;

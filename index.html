@@ -1,121 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atik Tespit Sistemi</title>
+    <link rel="stylesheet" href="/plugins/fontawesome/css/all.css" />
+    <link rel="stylesheet" href="/plugins/owl/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="/plugins/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="/assets/css/base.css" />
+    <link rel="stylesheet" href="/assets/css/slider-style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Atik Tespit Sistemi</title>
-  <link rel="stylesheet" href="/plugins/fontawesome/css/all.css">
-  <link rel="stylesheet" href="/plugins/owl/css/owl.carousel.min.css">
-  <link rel="stylesheet" href="/plugins/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="/assets/css/base.css">
-  <link rel="stylesheet" href="/assets/css/slider-style.css">
+  <body>
+    <div class="menu">
+      <ul class="wide-screen">
+        <li>
+          <a href="/index.html"><i class="logo fas fa-recycle"></i></a>
+        </li>
+        <li>
+          <a href="/pages/map.html"
+            ><i class="fas fa-search-location"></i>&nbsp; En yakın kutu</a
+          >
+        </li>
+        <li>
+          <a id="pick-btn"
+            ><i class="fas fa-hand-point-up"></i>&nbsp; Atık seç</a
+          >
+        </li>
+        <li>
+          <a id="camera-btn"><i class="fas fa-camera"></i>&nbsp; Fotoğraf al</a>
+        </li>
+        <li>
+          <a href="/pages/charts.html"
+            ><i class="fas fa-book"></i>&nbsp; Döküman</a
+          >
+        </li>
+        <li class="dropdown">
+          <a
+            class="dropdown-toggle"
+            id="dropdownMenuButton"
+            data-toggle="dropdown"
+          >
+            <i class="fas fa-user"></i>&nbsp;Kullanıcı
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item nav-link text-dark" href="#">Kayıt</a>
+            </li>
+            <li>
+              <a class="dropdown-item nav-link text-dark" href="#">Giriş</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
 
-</head>
+      <ul class="mobile-screen">
+        <li>
+          <a href="/index.html"><i class="logo fas fa-recycle"></i></a>
+        </li>
+        <li>
+          <a href="/pages/map.html"><i class="fas fa-search-location"></i></a>
+        </li>
+        <li>
+          <a><i class="fas fa-hand-point-up"></i></a>
+        </li>
+        <li>
+          <a id="camera-btn"><i class="fas fa-camera"></i></a>
+        </li>
+        <li>
+          <a href="/pages/charts.html"><i class="fas fa-book"></i></a>
+        </li>
+        <li>
+          <a href="/pages/profile.html"><i class="fas fa-user"></i></a>
+        </li>
+      </ul>
+    </div>
 
-<body>
-  <div class="menu">
-    <ul class="wide-screen">
-      <li><a href="/index.html"><i class="logo fas fa-recycle"></i></a></li>
-      <li><a href="/pages/map.html"><i class="fas fa-search-location"></i>&nbsp; En yakın kutu</a></li>
-      <li><a id="pick-btn"><i class="fas fa-hand-point-up"></i>&nbsp; Atık seç</a></li>
-      <li><a id="camera-btn"><i class="fas fa-camera"></i>&nbsp; Fotoğraf al</a></li>
-      <li><a href="/pages/charts.html"><i class="fas fa-book"></i>&nbsp; Döküman</a></li>
-      <li class="dropdown">
-        <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown">
-          <i class="fas fa-user"></i>&nbsp;Kullanıcı
-        </a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item nav-link text-dark" href="#">Kayıt</a></li>
-          <li><a class="dropdown-item nav-link text-dark" href="#">Giriş</a></li>
-        </ul>
-      </li>
-    </ul>
-    
-    <ul class="mobile-screen">
-      <li><a href="/index.html"><i class="logo fas fa-recycle"></i></a></li>
-      <li><a href="/pages/map.html"><i class="fas fa-search-location"></i></a></li>
-      <li><a><i class="fas fa-hand-point-up"></i></a></li>
-      <li><a id="camera-btn"><i class="fas fa-camera"></i></a></li>
-      <li><a href="/pages/charts.html"><i class="fas fa-book"></i></a></li>
-      <li><a href="/pages/profile.html"><i class="fas fa-user"></i></a></li>
-    </ul>
-  </div>
-
-  <div id="photoModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <div>
-        <video id="video" width="320" height="240" autoplay></video>
-        <canvas id="canvas" width="320" height="240"></canvas>
-      </div>
-      <button id="click-photo"><i class="fas fa-camera"></i></button><br><br>
-      <div id="sonuc">
-        <h1 id="header1"></h1>
-        <h2 id="header2"></h2>
-        <p id="content1"></p>
-        <h3 id="header3"></h3>
-        <p id="content2"></p>
-        <span id="warning" style="color:red"></span>
+    <div id="photoModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div>
+          <video id="video" width="320" height="240" autoplay></video>
+          <canvas id="canvas" width="320" height="240"></canvas>
+        </div>
+        <button id="click-photo"><i class="fas fa-camera"></i></button
+        ><br /><br />
       </div>
     </div>
-  </div> 
 
 
-  <div id=""></div>
 
- 
-
-
-  <div id="pickModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <div class="waste">
-        <label for="waste">Atık seçiniz</label>
-        <select name="waste" id="waste">
-          <option value="">kağıt torba</option>
-          <option value="">ambalaj kağıdı</option>
-          <option value="">İçecek kartonu</option>
-          <option value="">katlanır karton</option>
-        </select>
-      </div>
-    </div>
-  </div>
-
-  <div class="banner-slider">
-    <div class="owl-carousel">
-      <div class="item">
-        <div class="work">
-          <div class="img for-text d-flex align-items-center justify-content-center"
-            style="background-image: url(/assets/img/slider-1.jpg);">
-            <p class="header">Geri dönüşüme destek geleceğe destektir</p>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="work">
-          <div class="img for-text d-flex align-items-center justify-content-center"
-            style="background-image: url(/assets/img/slider-2.png);">
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="work">
-          <div class="img for-text d-flex align-items-center justify-content-center"
-            style="background-image: url(/assets/img/slider-3.jpg);">
-          </div>
+    <div id="pickModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="waste">
+          <label for="waste">Atık seçiniz</label>
+          <select name="waste" id="waste">
+            <option value="">kağıt torba</option>
+            <option value="">ambalaj kağıdı</option>
+            <option value="">İçecek kartonu</option>
+            <option value="">katlanır karton</option>
+          </select>
         </div>
       </div>
     </div>
-  </div>
 
- 
+    <div class="banner-slider">
+      <div class="owl-carousel">
+        <div class="item">
+          <div class="work">
+            <div
+              class="img for-text d-flex align-items-center justify-content-center"
+              style="background-image: url(/assets/img/slider-1.jpg)"
+            >
+              <p class="header">Geri dönüşüme destek geleceğe destektir</p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="work">
+            <div
+              class="img for-text d-flex align-items-center justify-content-center"
+              style="background-image: url(/assets/img/slider-2.png)"
+            ></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="work">
+            <div
+              class="img for-text d-flex align-items-center justify-content-center"
+              style="background-image: url(/assets/img/slider-3.jpg)"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <script src="/plugins/jquery/jquery-3.6.0.min.js"></script>
-  <script src="/plugins/owl/js/owl.carousel.min.js"></script>
-  <script src="/scripts/slider.js"></script>
-  <script src="/scripts/script.js"></script>
-</body>
-
+    <script src="/plugins/jquery/jquery-3.6.0.min.js"></script>
+    <script src="/plugins/owl/js/owl.carousel.min.js"></script>
+    <script src="/scripts/slider.js"></script>
+    <script src="/scripts/script.js"></script>
+  </body>
 </html>

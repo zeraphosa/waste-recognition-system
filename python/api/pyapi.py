@@ -40,7 +40,7 @@ def jsresponse():
         "content1" : "EPA, 2017 yilinda plastik sise uretiminin 3,7 milyon tona ulastigini ve bunun %30'dan azinin geri donusturuldugunu tahmin ediyor.",
         "header3" : "Azaltmak: ",
         "content2" : "Tek kullanimlik siseler veya teneke kutular satin almak yerine kendi sisenizi getirin.",
-        "warning" : "Atacaginiz nesne <span>plastik posetsiz, temiz, bos ve kuru olmalidir."
+        "warning" : "Atacaginiz nesne plastik posetsiz, temiz, bos ve kuru olmalidir."
     }
     response = flask.jsonify(value)
     response.headers.add('Access-Control-Allow-Origin', '*')
