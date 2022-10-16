@@ -1,10 +1,13 @@
-import {Button, Text, View} from 'react-native';
+import {Image, View} from 'react-native';
 
-export default function Home({navigation}) {
+export default function Home() {
   return (
-    <View>
-      <Text>Home</Text>
-      <Button title="Click" onPress={() => alert('Clicked')} />
+    <View style={{height: '100%', width: '100%'}}>
+      <Image
+        style={{height: '100%', width: '100%'}}
+        source={require('../assets/home_empty.png')}
+        resizeMode="cover"
+      />
     </View>
   );
 }

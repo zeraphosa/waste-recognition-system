@@ -5,7 +5,28 @@ import Camera from '../screens/Camera';
 import Docs from '../screens/Docs';
 
 const Tab = createBottomTabNavigator();
-
+function CustomTabBarButton({children, onPress}) {
+  return (
+    <TouchableOpacity
+      style={{
+        top: -35,
+        justifyContent: 'center',
+        alignItems: 'center',
+        ...style.shadow,
+      }}
+      onPress={onPress}>
+      <View
+        style={{
+          width: 70,
+          height: 70,
+          borderRadius: 35,
+          backgroundColor: '#59CE8F',
+        }}>
+        {children}
+      </View>
+    </TouchableOpacity>
+  );
+}
 export default function Tabs() {
   return (
     <Tab.Navigator
@@ -18,23 +39,67 @@ export default function Tabs() {
           left: 20,
           right: 20,
           elevation: 0,
-          backgroundColor: '#0c0c0c',
+          backgroundColor: '#000000',
           borderRadius: 15,
           height: 90,
-          ...style.shadow
+          ...style.shadow,
         },
       }}>
-      <Tab.Screen name="Home" component={Home} 
+      <Tab.Screen
+        name="Home"
+        component={Home}
         options={{
           tabBarIcon: ({focused}) => (
-            <View>
-              <Text>T</Text>
+            <View
+              style={{alignItems: 'center', justifyContent: 'center'}}>
+              <Image
+                source={require('../assets/icons/home.png')}
+                resizeMode="contain"
+                style={{
+                  width: 35,
+                  height: 35,
+                  tintColor: focused ? '#1E5128' : '#ffffff',
+                }}
+              />
             </View>
-          )
-        }}
-      ></Tab.Screen>
-      <Tab.Screen name="Camera" component={Camera}></Tab.Screen>
-      <Tab.Screen name="Docs" component={Docs}></Tab.Screen>
+          ),
+        }}></Tab.Screen>
+      <Tab.Screen
+        name="Camera"
+        component={Camera}
+        options={{
+          tabBarIcon: ({focused}) => (
+            <Image
+              source={require('../assets/icons/camera.png')}
+              resizeMode="contain"
+              style={{
+                width: 35,
+                height: 35,
+                tintColor: '#ffffff',
+              }}
+            />
+          ),
+          tabBarButton: props => <CustomTabBarButton {...props} />,
+        }}></Tab.Screen>
+      <Tab.Screen
+        name="Docs"
+        component={Docs}
+        options={{
+          tabBarIcon: ({focused}) => (
+            <View
+              style={{alignItems: 'center', justifyContent: 'center'}}>
+              <Image
+                source={require('../assets/icons/docs.png')}
+                resizeMode="contain"
+                style={{
+                  width: 35,
+                  height: 35,
+                  tintColor: focused ? '#1E5128' : '#ffffff',
+                }}
+              />
+            </View>
+          ),
+        }}></Tab.Screen>
     </Tab.Navigator>
   );
 }
