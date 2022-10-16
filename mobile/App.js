@@ -1,13 +1,10 @@
-import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import {Text, View} from 'react-native';
+import Tabs from './navigation/tabs';
 
 export default function App() {
   return (
     <NavigationContainer>
-      <View>
-        <Text>Hey</Text>
-      </View>
+      <Tabs />
     </NavigationContainer>
   );
 }
