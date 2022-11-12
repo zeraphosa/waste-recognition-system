@@ -20,7 +20,7 @@ function CustomTabBarButton({children, onPress}) {
           width: 70,
           height: 70,
           borderRadius: 35,
-          backgroundColor: '#59CE8F',
+          backgroundColor: '#1E5128',
         }}>
         {children}
       </View>
