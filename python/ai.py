@@ -21,7 +21,7 @@ while True:
     colors=np.tile(colors,(18,1))
     
     
-    model = cv2.dnn.readNetFromDarknet("C:/Users/MONSTER/Desktop/yolov4/darknet/yolov4.cfg", "C:/Users/MONSTER/Desktop/yolov4_last.weights")
+    model = cv2.dnn.readNetFromDarknet("C:/Users/zaurs/Desktop/yolov4.cfg", "C:/Users/zaurs/Desktop/yolov4_last.weights")
     
     
     layers=model.getLayerNames()
