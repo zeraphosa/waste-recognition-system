@@ -1,4 +1,4 @@
-### **Atik Tespit Sistemi**
+## Atik Tespit Sistemi
 
 Atik tespit sistemi atiklarin mobil uygulama ile fotograf alinarak hangi geridonusum kutusuna atilmasi gerektigi hakkinda bilgiler veren, atilacak nesnenin ozelliklerini gosteren sistemdir.
 
