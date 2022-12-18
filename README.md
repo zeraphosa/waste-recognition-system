@@ -4,7 +4,8 @@ cd flask-server -> python -m venv venv -> source venv/Scripts/activate
 python server.py
 
 cd mobile
-npx 
+npx react-native start
+npx react-native run-android
 
 Atik tespit sistemi atiklarin mobil uygulama ile fotograf alinarak hangi geridonusum kutusuna atilmasi gerektigi hakkinda bilgiler veren, atilacak nesnenin ozelliklerini gosteren sistemdir.
 
