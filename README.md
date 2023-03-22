@@ -1,4 +1,4 @@
-## Waste recognation system
+## Waste recognition system
 
 ### Project workplan
 - [ ] Create basic website 
