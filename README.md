@@ -1,5 +1,15 @@
 ## Waste recognation system
 
+### Project workplan
+- [ ] Create basic website 
+    - [ ] Navbar: Home, About
+    - [ ] Home: Images of app and download links
+    - [ ] Footer: Copyright and maybe links
+    - [ ] About: Docs, contribute, datas, how project works
+- [ ] Create mobile application
+- [ ] Combine python side with application
+
+### How to start React Native
 
 ### Tailwind configure for website
 ```
